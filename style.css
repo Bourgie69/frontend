@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    background-color: rgb(41, 40, 40);
+    color: white;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.header-txt{
+    margin: 20px 0px 0px 0px;
+    color: white;
+}
+.section{
+    margin-left: 20px;
+}
+.btn{
+    padding: 5px 10px 5px 10px;
+    border-radius: 25px;
+    border: none;
+    margin: 20px 0px 20px 0px;
+}
+.btn:hover{
+    background-color: rgb(121, 91, 91);
+    cursor: pointer;
+}
+
+.btn-top{
+}
+
+.images{
+    margin: 10px 0px 0px 0px;
+    height: 400px;
+    width: auto;
+}

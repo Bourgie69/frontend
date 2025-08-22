@@ -157,7 +157,46 @@
 //     console.log(weather[1] == 'sunny' ? "it's cold outside!": "it's cold outside, don't forget ur umbrella.")
 // }
 
-const originalText = document.getElementById('txt-top').innerHTML
+// const originalText = document.getElementById('txt-top').innerHTML
+
+// const texts = [
+//     originalText,
+//     'text1',
+//     'text2',
+//     'text3',
+//     'text4'
+// ]
+
+// let currentTextIndex = 0
+
+// document.getElementById('txt-change').addEventListener('click', () => {
+//     document.getElementById('txt-top').innerHTML = texts[currentTextIndex]
+//     currentTextIndex = (currentTextIndex + 1) % texts.length;
+// });
+
+// const images = [
+//     'assets/puppy.png',
+//     'assets/hamster.png'
+// ]
+
+// const petDesc = [
+//     'This is a puppy',
+//     'This is a hamster'
+// ]
+
+// let currentDescIndex = 0
+
+// let currentImageIndex = 0
+
+// document.getElementById('img-change').addEventListener('click', () =>{
+//     document.getElementById('pet-image').src = images[currentImageIndex]
+//     document.getElementById('pet-txt').innerHTML = petDesc[currentDescIndex]
+//     currentImageIndex = (currentImageIndex + 1) % images.length
+//     currentDescIndex = (currentDescIndex + 1) % petDesc.length
+// })
+
+const txtTop = document.getElementById('txt-top');
+const originalText = txtTop.innerHTML
 
 const texts = [
     originalText,
@@ -166,18 +205,24 @@ const texts = [
     'text3',
     'text4'
 ]
-
 let currentTextIndex = 0
 
-document.getElementById('txt-change').addEventListener('click', () => {
-    document.getElementById('txt-top').innerHTML = texts[currentTextIndex]
-    currentTextIndex = (currentTextIndex + 1) % texts.length;
-});
+const txtChange = document.getElementById('txt-change');
+txtChange.addEventListener('click', () =>{
+    txtTop.innerHTML = texts[currentTextIndex];
+    currentTextIndex = (currentTextIndex + 1) % texts.length
+})
+
+const petImage = document.getElementById('pet-image')
+const petText = document.getElementById('pet-text')
+const imgChange = document.getElementById('img-change')
 
 const images = [
     'assets/puppy.png',
     'assets/hamster.png'
 ]
+
+let currentImageIndex = 0
 
 const petDesc = [
     'This is a puppy',
@@ -186,11 +231,9 @@ const petDesc = [
 
 let currentDescIndex = 0
 
-let currentImageIndex = 0
-
-document.getElementById('img-change').addEventListener('click', () =>{
-    document.getElementById('pet-image').src = images[currentImageIndex]
-    document.getElementById('pet-txt').innerHTML = petDesc[currentDescIndex]
-    currentImageIndex = (currentImageIndex + 1) % images.length
+imgChange.addEventListener('click', () =>{
+    petImage.src = images[currentImageIndex];
+    petText.innerHTML = petDesc[currentDescIndex];
+    currentImageIndex = (currentImageIndex + 1) % images.length;
     currentDescIndex = (currentDescIndex + 1) % petDesc.length
 })
